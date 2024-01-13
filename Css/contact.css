@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: #1E202B;
+}
+.main-nav{
+    background-color: #1E202B;
+}
+#previous-page .previous {
+  background: #262936;
+  border-radius: 40px;
+  padding: 20px 30px;
+  font-size: 13px;
+  font-size: 0.9285714286em;
+}
+#previous-page .previous a,
+#previous-page .previous i,
+#previous-page .previous span {
+  color: #bfc1c8;
+}
+
+#previous-page .previous a{
+    text-decoration: none;
+}
+#previous-page .previous i{
+    width: 12px;
+    height: 7px;
+    margin: 0 10px;
+}
+
+/* Contact left side  */
+#content .info{
+    background: #262936;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#content .info .map{
+    height: 220px;
+}
+
+#content .content-info{
+    padding: 20px;
+}
+#content .address-info img{
+    margin-right: 5px;
+}
+#content .address-info a{
+    margin-right: 10px;
+}
+#content .title h2{
+    font-size: 2.5714285714rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+}
+#content .title p{
+    font-size: 15px ;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #bfc1c8;;
+}
+#content .input-group input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid #393c48;
+    background: transparent;
+    border-radius: 30px;
+    outline: none;
+}
+#content .input-group textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid #393c48;
+    background: transparent;
+    resize: vertical;
+    border-radius: 30px;
+    outline: none;
+}
+.submit{
+    text-align: right;
+}
+.submit #sendBtn{
+    border: none;
+    background: #009ad8;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    width: 100px;
+}
+
+
+/* Footer Begin */
+#footer {
+    background: #262936;
+    padding: 50px 0;
+  }
+  #footer .group input{
+    padding: 20px 100px 20px 20px;
+    background: #1e202b;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    color: white;
+  }
+  #footer .group #subscribe{
+    position: absolute;
+    top: 5px ;
+    bottom: 5px;
+    right: 5px;
+    padding: 0 40px;
+    border-radius: 30px ;
+    background-color: #009ad8;
+    color: white;
+    border-color: transparent;
+  }
+  #footer p{
+    color: #bfc1c8;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-block: 10px;
+  }
+  #footer .social li{
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-right: 3px;
+    border-radius: 50%;
+    background: #1e202b;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    transition: all .25s;
+  }
+  #footer .social li a{
+    transition: all .25s;
+  }
+  #footer .social li:hover{
+    background-color: #009ad8;
+  }
+  #footer .social ul li:hover a{
+    color: white;
+  }
+  

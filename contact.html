@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <!-- Bootstrap Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- main Css -->
+    <link rel="stylesheet" href="Css/contact.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg main-nav navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="Images/logo.png"
+            alt="Cloud-png"
+            class="logo"
+            width="64px"
+            height="38px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section id="previous-page" class="py-2">
+        <div class="container">
+          <div class="previous">
+            <a href="/">Home</a>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Contact</span>
+          </div>
+        </div>
+      </section>
+      <section id="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 my-2">
+              <div class="info">
+                <div
+                  class="map"
+                  data-latitude="-6.897789"
+                  data-longitude="107.621735"
+                ></div>
+                <div class="content-info">
+                  <div class="address d-flex">
+                    <div class="image pe-3">
+                      <img
+                        src="https://routeweather.netlify.app/images/icon-marker@2x.png"
+                        alt="location-png"
+                        width="12"
+                        height="19"
+                      />
+                    </div>
+                    <div class="info text-white">
+                      <p>
+                        Company Name INC. <br />
+                        2803 Avenue Street, Los Angeles
+                      </p>
+                    </div>
+                  </div>
+                  <div class="address-info">
+                    <a href="#" class="text-decoration-none text-white">
+                      <img
+                        src="https://routeweather.netlify.app/images/icon-phone@2x.png"
+                        alt="phone-png"
+                        width="19"
+                        height="19"
+                      />+1 800 314 235
+                    </a>
+                    <a href="#" class="text-decoration-none text-white">
+                      <img
+                        src="https://routeweather.netlify.app/images/icon-envelope@2x.png"
+                        alt="mail-png"
+                        width="16"
+                        height="12"
+                      />contact@companyname.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 offset-md-1">
+              <div class="title">
+                <h2 class="text-white">Contact Us</h2>
+                <p class="text-white lead">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Commodi consectetur inventore ducimus, facilis, numquam id
+                  soluta omnis eius recusandae nesciunt vero repellat harum cum.
+                  Nisi facilis odit hic, ipsum sed!
+                </p>
+              </div>
+              <div class="input-group d-flex flex-column">
+                <div class="row m-0">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="Your name...">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" placeholder="E-mail address...">
+                    </div>
+                </div>
+                <div class="row m-0 ">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="Company name...">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" placeholder="Website...">
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="col-md-12">
+                        <textarea placeholder="Message..." cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="submit ">
+                <button id="sendBtn" class="mb-3">Submit</button>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="group position-relative">
+                <input
+                  type="text"
+                  placeholder="Enter your e-mail to subscribe...."
+                />
+                <button id="subscribe">Subscribe</button>
+              </div>
+            </div>
+            <div class="col-md-3 offset-md-1 mt-4 mt-sm-0">
+              <div class="social">
+                <ul class="list-unstyled d-flex">
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p>
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
