@@ -28,10 +28,7 @@ const currentWeather = document.getElementById("currentWeather");
 
 // API Link
 async function getWeatherApi(city) {
-  try {
-    let http = await fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=79bfff5c2aea4f6295f142203240901&q=${city}&days=7`
-    );
+  try {let http = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=79bfff5c2aea4f6295f142203240901&q=${city}&days=7`);
 
     if (http.ok && http.status !== 400) {
       let response = await http.json();
@@ -57,25 +54,23 @@ findBtn.addEventListener("click", function () {
 // Display weather variables
 function displayCity(data, temp) {
   const currentDate = new Date();
-  today.innerHTML = ` <div class="day"> <p>${
+  today.innerHTML = `<div class="day"> <p>${
     days[currentDate.getDay()]
   }</p></div>
   <div class="date"><p>${currentDate.getDate()} ${
     monthNames[currentDate.getMonth()]
   }</p> </div>`;
-
-  currentWeather.innerHTML = `<div class="city"> <p> ${data.name} </p></div>  
+  currentWeather.innerHTML = `<div class="city"><p> ${data.name}</p></div>  
   <div class="forecast-degree d-flex align-content-center justify-content-center">
   <div class="num" id="num"><p>${temp.temp_c}<sup>o</sup>C</p></div>
-  <div class="icon" id="icon"><img  src="${temp.condition.icon} "  class='w-100'/></div>
+  <div class="icon" id="icon"><img  src="${temp.condition.icon}"  class='w-100'/></div>
   </div> <div class="forecast-status text-center"> <p> ${temp.condition.text} </p></div>
   <div class="forecast-foot">
-       <div class="row text-center">
-       <div class="col-sm-4 col-md-4"><i class="fa-solid fa-umbrella"></i> ${temp.cloud} % </div>
-        <div class="col-sm-4 col-md-4"> <i class="fa-solid fa-wind"></i> ${temp.wind_kph} km/h</div>
-       <div class="col-sm-4 col-md-4"><i class="fa-regular fa-compass"></i>${temp.wind_dir}</div>
-        </div>
- </div>`;
+  <div class="row text-center">
+  <div class="col-sm-4 col-md-4"><i class="fa-solid fa-umbrella"></i> ${temp.cloud} % </div>
+  <div class="col-sm-4 col-md-4"> <i class="fa-solid fa-wind"></i> ${temp.wind_kph} km/h</div>
+  <div class="col-sm-4 col-md-4"><i class="fa-regular fa-compass"></i>${temp.wind_dir}</div>
+  </div></div>`;
 }
 
 function displayNext(forecast) {
@@ -84,9 +79,7 @@ function displayNext(forecast) {
     x += `
     <tr>
       <td> ${days[new Date(forecast[i].date.replace(" ", "T")).getDay()]}</td>
-      <td>  ${forecast[i].day.condition.text}  <img src='${
-      forecast[i].day.condition.icon
-    }'/></td>
+      <td >  ${forecast[i].day.condition.text}  <img src='${forecast[i].day.condition.icon}'/></td>
       <td> ${forecast[i].day.mintemp_c} <sup>o</sup> C</td> 
       <td>  ${forecast[i].day.maxtemp_c} <sup>o</sup> C</td>
     </tr>
