@@ -28,17 +28,21 @@ const currentWeather = document.getElementById("currentWeather");
 
 // API Link
 async function getWeatherApi(city) {
-  let http = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=79bfff5c2aea4f6295f142203240901&q=${city}&days=7`
-  );
-  if (http.ok && 400 != http.status) {
-    let response = await http.json();
-    console.log(response);
-    displayCity(response.location, response.current);
+  try {
+    let http = await fetch(
+      `https://api.weatherapi.com/v1/forecast.json?key=79bfff5c2aea4f6295f142203240901&q=${city}&days=7`
+    );
 
-    displayNext(response.forecast.forecastday);
-  } else {
-    console.log("Something wrong happen");
+    if (http.ok && http.status !== 400) {
+      let response = await http.json();
+      console.log(response);
+      displayCity(response.location, response.current);
+      displayNext(response.forecast.forecastday);
+    } else {
+      console.log("Something wrong happened");
+    }
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
   }
 }
 getWeatherApi("Cairo");
