@@ -50,7 +50,6 @@ searchInput.addEventListener("keyup", function () {
 findBtn.addEventListener("click", function () {
   getWeatherApi(searchInput.value);
 });
-
 // Display weather variables
 function displayCity(data, temp) {
   const currentDate = new Date();
