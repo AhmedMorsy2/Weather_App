@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="Css/main.css" />
   </head>
   <body>
+    <div class="loading">
+      <span class="loader"></span>
+    </div>
     <nav class="navbar navbar-expand-lg main-nav navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -61,7 +64,9 @@
               <a class="nav-link" aria-current="page" href="#">Photos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="contact.html">Contact</a>
+              <a class="nav-link" aria-current="page" href="contact.html"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -86,13 +91,17 @@
             <div class="row">
               <div class="col-lg-7 my-2">
                 <div class="forecast">
-                  <div class="forecast-head d-flex align-content-center justify-content-between" id="today"></div>
-                  <div class="forecast-body d-flex flex-column" id="currentWeather">
-
-                  </div>
+                  <div
+                    class="forecast-head d-flex align-content-center justify-content-between"
+                    id="today"
+                  ></div>
+                  <div
+                    class="forecast-body d-flex flex-column"
+                    id="currentWeather"
+                  ></div>
                 </div>
               </div>
-              <div class="col-lg-5  my-2 ">
+              <div class="col-lg-5 my-2">
                 <table class="table text-center">
                   <tbody id="tableData"></tbody>
                 </table>
@@ -153,8 +162,9 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- main JS -->
     <script src="JS/main.js"></script>
   </body>
 </html>
-

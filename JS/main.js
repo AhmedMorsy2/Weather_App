@@ -28,7 +28,10 @@ const currentWeather = document.getElementById("currentWeather");
 
 // API Link
 async function getWeatherApi(city) {
-  try {let http = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=79bfff5c2aea4f6295f142203240901&q=${city}&days=7`);
+  try {
+    let http = await fetch(
+      `https://api.weatherapi.com/v1/forecast.json?key=79bfff5c2aea4f6295f142203240901&q=${city}&days=7`
+    );
 
     if (http.ok && http.status !== 400) {
       let response = await http.json();
@@ -43,6 +46,18 @@ async function getWeatherApi(city) {
   }
 }
 getWeatherApi("Cairo");
+
+
+$(function () {
+  $(".loader").fadeOut(1000, function () {
+    $(".loading").fadeOut(1000, function () {
+      $("body").css("overflow", "auto");
+      $(".loading").remove(); // Move this statement inside the callback
+    });
+  });
+});
+
+
 
 searchInput.addEventListener("keyup", function () {
   getWeatherApi(searchInput.value);
@@ -78,7 +93,9 @@ function displayNext(forecast) {
     x += `
     <tr>
       <td> ${days[new Date(forecast[i].date.replace(" ", "T")).getDay()]}</td>
-      <td >  ${forecast[i].day.condition.text}  <img src='${forecast[i].day.condition.icon}'/></td>
+      <td >  ${forecast[i].day.condition.text}  <img src='${
+      forecast[i].day.condition.icon
+    }'/></td>
       <td> ${forecast[i].day.mintemp_c} <sup>o</sup> C</td> 
       <td>  ${forecast[i].day.maxtemp_c} <sup>o</sup> C</td>
     </tr>
