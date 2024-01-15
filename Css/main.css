@@ -154,11 +154,16 @@ body{
   border-radius: 15px;
   overflow: hidden;
 }
+#weather .weather-info .table thead tr td{
+  background-color: #32505e;
+  color: white;
+}
 #weather .weather-info .table tbody tr td {
   /* background-color: #323544; */
   background-color: #3c5d6e8a;
   color: white;
 }
+
 /* Forecast End */
 
 /* Footer Begin */

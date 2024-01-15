@@ -37,8 +37,8 @@ function getPosition(position) {
   getWeatherApi(lat + "," + lon);
 }
 $(function () {
-  $(".loader").fadeOut(1000, function () {
-    $(".loading").fadeOut(1000, function () {
+  $(".loader").fadeOut(500, function () {
+    $(".loading").fadeOut(500, function () {
       $("body").css("overflow", "auto");
       $(".loading").remove(); // Move this statement inside the callback
     });
