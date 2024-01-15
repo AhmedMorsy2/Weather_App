@@ -26,6 +26,27 @@ const findBtn = document.getElementById("findBtn");
 const today = document.getElementById("today");
 const currentWeather = document.getElementById("currentWeather");
 
+(function () {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(getPosition);
+  }
+})();
+function getPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  getWeatherApi(lat + "," + lon);
+}
+$(function () {
+  $(".loader").fadeOut(1000, function () {
+    $(".loading").fadeOut(1000, function () {
+      $("body").css("overflow", "auto");
+      $(".loading").remove(); // Move this statement inside the callback
+    });
+  });
+});
+
+
+
 // API Link
 async function getWeatherApi(city) {
   try {
@@ -45,18 +66,6 @@ async function getWeatherApi(city) {
     console.error("Error fetching weather data:", error);
   }
 }
-getWeatherApi("Cairo");
-
-
-$(function () {
-  $(".loader").fadeOut(1000, function () {
-    $(".loading").fadeOut(1000, function () {
-      $("body").css("overflow", "auto");
-      $(".loading").remove(); // Move this statement inside the callback
-    });
-  });
-});
-
 
 
 searchInput.addEventListener("keyup", function () {
@@ -74,7 +83,7 @@ function displayCity(data, temp) {
   <div class="date"><p>${currentDate.getDate()} ${
     monthNames[currentDate.getMonth()]
   }</p> </div>`;
-  currentWeather.innerHTML = `<div class="city"><p> ${data.name}</p></div>  
+  currentWeather.innerHTML = `<div class="city"><p> ${data.name} ,${data.region}</p></div>  
   <div class="forecast-degree d-flex align-content-center justify-content-center">
   <div class="num" id="num"><p>${temp.temp_c}<sup>o</sup>C</p></div>
   <div class="icon" id="icon"><img  src="${temp.condition.icon}"  class='w-100'/></div>

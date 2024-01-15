@@ -1,3 +1,4 @@
+
 /* Navbar Begin */
 .main-nav{
   background-color: #1E202B;
@@ -24,6 +25,7 @@ main{
 /* Loading screen */
 body{
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 .loading{
   position: fixed ;
@@ -104,13 +106,13 @@ body{
 #weather .forecast {
   margin: 0 auto;
   border-radius: 15px;
-  overflow: hidden;
-  
+  overflow: hidden; 
 }
-
 #weather .forecast .forecast-head {
   color: white;
   background-color: #32505e;
+  font-size: 1.3rem;
+  font-weight: 600;
   padding: 15px;
 }
 #weather .forecast .forecast-body {
@@ -118,19 +120,19 @@ body{
   background-color: #3c5d6e8a;
   padding: 15px;
 }
-
 #weather .forecast .forecast-degree .num {
   font-size: 6.4285714286rem;
   margin-right: 30px;
   font-weight: 700;
 }
-
 #weather .forecast .forecast-degree .icon {
   align-self: center;
   margin-bottom: 20px;
 }
-
-
+#weather .forecast .city {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 #weather .forecast .forecast-status {
   color: white;
   margin: 20px 0;
