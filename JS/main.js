@@ -37,17 +37,16 @@ function getPosition(position) {
   getWeatherApi(lat + "," + lon);
 }
 $(function () {
-  $(".loader").fadeOut(500, function () {
-    $(".loading").fadeOut(500, function () {
+  $(".loader").fadeOut(1000, function () {
+    $(".loading").fadeOut(1000, function () {
       $("body").css("overflow", "auto");
-      $(".loading").remove(); // Move this statement inside the callback
+      $(".loading").remove();
     });
   });
 });
-
-
-
 // API Link
+// Set default value
+getWeatherApi("Cairo");
 async function getWeatherApi(city) {
   try {
     let http = await fetch(
@@ -66,7 +65,6 @@ async function getWeatherApi(city) {
     console.error("Error fetching weather data:", error);
   }
 }
-
 
 searchInput.addEventListener("keyup", function () {
   getWeatherApi(searchInput.value);
