@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon" />
     <!-- Bootstrap Css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -27,7 +27,6 @@
     />
     <!-- main Css -->
     <link rel="stylesheet" href="Css/main.css" />
-
   </head>
   <body>
     <div class="loading">
@@ -95,34 +94,51 @@
         <div class="container">
           <div class="weather-info">
             <div class="row">
-              <div class="col-lg-7 my-2">
-                <div class="forecast">
+              <div class="col-lg-4">
+                <!-- Current -->
+                <div class="forecast mb-3">
                   <div
                     class="forecast-head d-flex align-content-center justify-content-between"
-                    id="today">
-                  </div>
+                    id="today"
+                  ></div>
                   <div
                     class="forecast-body d-flex flex-column"
-                    id="currentWeather">
-                  </div>
+                    id="currentWeather"
+                  ></div>
                 </div>
               </div>
-              <div class="col-lg-5 my-2">
-                <table class="table text-center">
-                  <thead>
-                    <tr>
-                      <td>Day</td>
-                      <td>Condition</td>
-                      <td>Min</td>
-                      <td>Max</td>
-                    </tr>
-                  </thead>
-                  <tbody id="tableData"></tbody>
-                </table>
+              <div class="col-md-4">
+                <!-- Tomorrow -->
+                <div class="forecast-next mb-3">
+                  <div
+                    class="forecast-head d-flex align-content-center justify-content-between"
+                    id="tomorrow"
+                  ></div>
+                  <div
+                    class="forecast-body d-flex flex-column"
+                    id="tomorrowWeather"
+                  ></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <!-- The day after -->
+                <div class="forcast_day_after mb-3">
+                  <div
+                    class="d-flex align-content-center justify-content-between forecast-head"
+                    id="the_day_after"
+                  ></div>
+                  <div
+                    class="content text-white forecast-body d-flex flex-column"
+                    id="thedayafterWeather"
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <section id="map">
+       
       </section>
       <section id="footer">
         <div class="container">
@@ -131,7 +147,8 @@
               <div class="group position-relative">
                 <input
                   type="text"
-                  placeholder="Enter your e-mail to subscribe...."/>
+                  placeholder="Enter your e-mail to subscribe...."
+                />
                 <button id="subscribe">Subscribe</button>
               </div>
             </div>
@@ -170,8 +187,8 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- main JS -->

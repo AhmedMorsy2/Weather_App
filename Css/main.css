@@ -1,7 +1,6 @@
-
 /* Navbar Begin */
-.main-nav{
-  background-color: #1E202B;
+.main-nav {
+  background-color: #1e202b;
 }
 .main-nav .navbar-brand img {
   margin-right: 10px;
@@ -16,24 +15,24 @@
   color: #bfc1c8;
 }
 /* Navbar End */
-main{
+main {
   background-position: center center;
   background-image: url("../Images/Background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 /* Loading screen */
-body{
+body {
   overflow: hidden;
   font-family: "Poppins", sans-serif;
 }
-.loading{
-  position: fixed ;
+.loading {
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #1E202B;
+  background-color: #1e202b;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -44,7 +43,15 @@ body{
   height: 140px;
   display: block;
   margin: 0 auto 20px;
-  background-image: radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #FFF 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), radial-gradient(circle 15px at 15px 15px, #FFF 100%, transparent 0), linear-gradient(#FFF 50px, transparent 0);
+  background-image: radial-gradient(
+      circle 25px at 25px 25px,
+      #fff 100%,
+      transparent 0
+    ),
+    radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0),
+    radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
+    radial-gradient(circle 15px at 15px 15px, #fff 100%, transparent 0),
+    linear-gradient(#fff 50px, transparent 0);
   background-size: 50px 50px, 100px 75px, 50px 50px, 30px 32px, 136px 20px;
   background-repeat: no-repeat;
   background-position: 0px 30px, 30px 0px, 113px 29px, 147px 50px, 23px 60px;
@@ -52,26 +59,38 @@ body{
   box-sizing: border-box;
 }
 .loader::after {
-  content: '';  
+  content: "";
   position: absolute;
   left: 2px;
   top: 65px;
   width: 2px;
   height: 6px;
-  color: #FFF;
+  color: #fff;
   box-sizing: border-box;
   animation: animloader 0.6s linear infinite;
 }
 
 @keyframes animloader {
   0% {
-    box-shadow: 25px 0 white, 50px 0 white, 75px 0 white, 100px 0 white, 125px 0 white, 150px 0 white, 25px 0 white, 50px 0 white, 75px 0 white, 100px 0 white, 125px 0 white, 150px 0 white;
+    box-shadow: 25px 0 white, 50px 0 white, 75px 0 white, 100px 0 white,
+      125px 0 white, 150px 0 white, 25px 0 white, 50px 0 white, 75px 0 white,
+      100px 0 white, 125px 0 white, 150px 0 white;
   }
   50% {
-    box-shadow: 25px 20px white, 50px 60px rgba(255, 255, 255, 0), 75px 30px rgba(255, 255, 255, 0), 100px 70px rgba(255, 255, 255, 0), 125px 40px white, 150px 60px rgba(255, 255, 255, 0), 25px 20px white, 50px 30px white, 75px 10px white, 100px 30px white, 125px 30px rgba(255, 255, 255, 0), 150px 30px rgba(255, 255, 255, 0);
+    box-shadow: 25px 20px white, 50px 60px rgba(255, 255, 255, 0),
+      75px 30px rgba(255, 255, 255, 0), 100px 70px rgba(255, 255, 255, 0),
+      125px 40px white, 150px 60px rgba(255, 255, 255, 0), 25px 20px white,
+      50px 30px white, 75px 10px white, 100px 30px white,
+      125px 30px rgba(255, 255, 255, 0), 150px 30px rgba(255, 255, 255, 0);
   }
   100% {
-    box-shadow: 25px 60px rgba(255, 255, 255, 0), 50px 60px rgba(255, 255, 255, 0), 75px 50px rgba(255, 255, 255, 0), 100px 70px rgba(255, 255, 255, 0), 125px 70px rgba(255, 255, 255, 0), 150px 60px rgba(255, 255, 255, 0), 25px 80px rgba(255, 255, 255, 0), 50px 80px rgba(255, 255, 255, 0), 75px 70px rgba(255, 255, 255, 0), 100px 60px rgba(255, 255, 255, 0), 125px 30px rgba(255, 255, 255, 0), 150px 30px rgba(255, 255, 255, 0);
+    box-shadow: 25px 60px rgba(255, 255, 255, 0),
+      50px 60px rgba(255, 255, 255, 0), 75px 50px rgba(255, 255, 255, 0),
+      100px 70px rgba(255, 255, 255, 0), 125px 70px rgba(255, 255, 255, 0),
+      150px 60px rgba(255, 255, 255, 0), 25px 80px rgba(255, 255, 255, 0),
+      50px 80px rgba(255, 255, 255, 0), 75px 70px rgba(255, 255, 255, 0),
+      100px 60px rgba(255, 255, 255, 0), 125px 30px rgba(255, 255, 255, 0),
+      150px 30px rgba(255, 255, 255, 0);
   }
 }
 
@@ -106,7 +125,7 @@ body{
 #weather .forecast {
   margin: 0 auto;
   border-radius: 15px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 #weather .forecast .forecast-head {
   color: white;
@@ -121,7 +140,7 @@ body{
   padding: 15px;
 }
 #weather .forecast .forecast-degree .num {
-  font-size: 6.4285714286rem;
+  font-size: 5.625rem;
   margin-right: 30px;
   font-weight: 700;
 }
@@ -137,32 +156,73 @@ body{
   color: white;
   margin: 20px 0;
 }
-
-#weather .forecast .forecast-foot span {
+.forecast-foot span {
   margin-right: 20px;
 }
-#weather .forecast .forecast-foot img {
+.forecast-foot img {
   margin-right: 5px;
 }
-#weather .forecast-foot i{
+.forecast-foot i {
   color: white;
   margin-right: 5px;
 }
 
-#weather .weather-info .table {
+/* Tomorrow */
+#weather .forecast-next {
   margin: 0 auto;
+  background-color: #3c5d6e8a;
   border-radius: 15px;
   overflow: hidden;
 }
-#weather .weather-info .table thead tr td{
+#weather .forecast-next .forecast-head {
+  color: white;
   background-color: #32505e;
-  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 15px;
 }
-#weather .weather-info .table tbody tr td {
-  /* background-color: #323544; */
+#weather .forecast-next .forecast-body {
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+#weather .forecast-next .forecast-degree .num {
+  font-size: 5.625rem;
+  margin-right: 30px;
+  font-weight: 700;
+}
+#weather .forecast-next .forecast-degree .icon {
+  align-self: center;
+}
+
+/* Day after */
+#weather .forcast_day_after {
+  margin: 0 auto;
   background-color: #3c5d6e8a;
-  color: white;
+  border-radius: 15px;
+  overflow: hidden;
 }
+#weather .forcast_day_after .forecast-head {
+  color: white;
+  background-color: #32505e;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 15px;
+}
+#weather .forcast_day_after .forecast-body {
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+#weather .forcast_day_after .forecast-degree .num {
+  font-size: 5.625rem;
+  margin-right: 30px;
+  font-weight: 700;
+}
+#weather .forcast_day_after .forecast-degree .icon {
+  align-self: center;
+}
+
 
 /* Forecast End */
 
@@ -171,7 +231,7 @@ body{
   background: #262936;
   padding: 50px 0;
 }
-#footer .group input{
+#footer .group input {
   padding: 20px 100px 20px 20px;
   background: #1e202b;
   outline: none;
@@ -180,41 +240,41 @@ body{
   width: 100%;
   color: white;
 }
-#footer .group #subscribe{
+#footer .group #subscribe {
   position: absolute;
-  top: 5px ;
+  top: 5px;
   bottom: 5px;
   right: 5px;
   padding: 0 40px;
-  border-radius: 30px ;
+  border-radius: 30px;
   background-color: #009ad8;
   color: white;
   border-color: transparent;
 }
-#footer p{
+#footer p {
   color: #bfc1c8;
   font-weight: 300;
   line-height: 1.5;
   padding-block: 10px;
 }
-#footer .social li{
+#footer .social li {
   width: 40px;
   height: 40px;
   font-size: 18px;
   margin-right: 3px;
   border-radius: 50%;
   background: #1e202b;
-  display: flex ;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .25s;
+  transition: all 0.25s;
 }
-#footer .social li a{
-  transition: all .25s;
+#footer .social li a {
+  transition: all 0.25s;
 }
-#footer .social li:hover{
+#footer .social li:hover {
   background-color: #009ad8;
 }
-#footer .social ul li:hover a{
+#footer .social ul li:hover a {
   color: white;
 }
