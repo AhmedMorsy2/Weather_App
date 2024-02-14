@@ -56,17 +56,17 @@ getWeatherApi("Cairo");
 function displayMap(city) {
   map.innerHTML = `
   <div class="container">
-  <div class="rounded-3 overflow-hidden mb-3" style="width: 100%">
-      <iframe
-        width="100%"
-        height="600"
-        frameborder="0"
-        scrolling="no"
-        marginheight="0"
-        marginwidth="0"
-        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=${city}&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-      </iframe>
-    </div>
+  <div class='rounded-3 overflow-hidden mb-3' style="width: 100%">
+  <iframe
+    width="100%"
+    height="600"
+    frameborder="0"
+    scrolling="no"
+    marginheight="0"
+    marginwidth="0"
+    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=${city}&amp;t=&amp;z=8&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+    ></iframe>
+</div>
   </div>`;
 }
 
