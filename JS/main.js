@@ -56,7 +56,7 @@ getWeatherApi("Cairo");
 function displayMap(city) {
   map.innerHTML = `
   <div class="container">
-  <div class='rounded-3 overflow-hidden mb-3' style="width: 100%">
+  <div class='rounded-3 mb-3' style="width: 100%">
   <iframe
     width="100%"
     height="600"
@@ -64,7 +64,7 @@ function displayMap(city) {
     scrolling="no"
     marginheight="0"
     marginwidth="0"
-    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=${city}&amp;t=&amp;z=8&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=${city}&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
     ></iframe>
 </div>
   </div>`;
@@ -121,7 +121,6 @@ function displayNext(forecast) {
   // Tomorrow Begin
   const tomorrowDate = new Date();
   tomorrow.innerHTML = `
-  <div class="day"> <p>${days[tomorrowDate.getDay() + 1]}</p></div>
   <div class="date"><p>${tomorrowDate.getDate() + 1} ${
     monthNames[tomorrowDate.getMonth()]
   }</p> </div> `;
@@ -143,12 +142,9 @@ function displayNext(forecast) {
   // Tomorrow End
 
   // The_day_after Begin
-  const tda = new Date();
   the_day_after.innerHTML = `
-  <div class="day"> <p>${days[tda.getDay() + 2]}</p></div>
-  <div class="date"><p>${tda.getDate() + 2} ${
-    monthNames[tda.getMonth()]
-  }</p> </div> `;
+
+  <div class="date"><p>${tomorrowDate.getDate() + 2} ${monthNames[tomorrowDate.getMonth()]}</p> </div> `;
 
   thedayafterWeather.innerHTML = `
   <div class='forecast-degree mt-5 d-flex align-content-center justify-content-center'>
